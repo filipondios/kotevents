@@ -1,6 +1,6 @@
 import argparse
-from update_events import load_events, save_event, vocab
-from predict_events import predict_next_event
+from core.update_events import load_events, save_event, vocab
+from core.predict_events import predict_next_event
 
 def main():
     # create a command line parser
