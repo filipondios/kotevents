@@ -1,9 +1,9 @@
 vocab = [
-    'asalto a la camara',
-    'catacumbas',
-    'el juego de joe',
-    'reino mistico',
-    'totem viviente'
+    'vault heist',
+    'catacombs',
+    "joe's game",
+    'mystic realm',
+    'living totem'
 ]
 
 def load_events(filename='events.txt'):
