@@ -1,6 +1,8 @@
 
 <div align="center"><h1>Kotevents</h1></div>
 
+## About
+
 In the game [King of Thieves](https://www.kingofthieves.com/), there are certain events where players can earn rewards. These events repeat every so often, each lasting 3 days. I became curious to know if there was a predefined sequence for these events or if they were random.
 
 That's when I decided to apply [n-grams](https://en.wikipedia.org/wiki/N-gram) to the event names to try to predict the next upcoming event. After several months of recording events, I concluded that the events follow a predefined sequence, which can be seen at Figure 1, since the probabilities when considering 4 previous events always resulted in ``1.0``.
@@ -17,6 +19,8 @@ graph LR
     C -->|8| A
 ```
 <div align="center"><p><i>Figure 1. Event cycle within the game, length 8</i></p></div>
+
+## Predicting events
 
 The `main.py` script is based on the list of events in `events.txt`, where the first lines are the oldest events and the last lines are the most recent. If you want to try to predict the next event taking into account n previous events, the value of the parameter n should be `n+1`:
 
@@ -41,3 +45,14 @@ You could try to add `joe's game` to the list and then predict again:
 python main.py add "joe's game"
 python main.py predict -n 2
 ```
+
+## Staying up-to-date
+
+In this same repository, there is a web page that shows in real time which event is the current one, its predecessor and its successor, along with the complete event graph. You can access it via [this link](https://filipondios.github.io/kotevents/).
+
+<div align="center">
+<img width="800" alt="imagen" src="https://github.com/user-attachments/assets/9042f132-e7c8-4c5f-af5d-b04e85819d59" />
+<p><i>Figure 2. Preview of this proyect's web page</i></p>
+</div>
+
+
