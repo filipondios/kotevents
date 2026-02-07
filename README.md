@@ -1,8 +1,9 @@
+
 <div align="center"><h1>Kotevents</h1></div>
 
-En el juego [King of Thieves](https://www.kingofthieves.com/) hay ciertos eventos donde los jugadores pueden obtener recompensas y se repiten cada cierto tiempo, durando cada uno 3 dias. Me dió curiosidad por saber si existía una secuencia predefinida para dichos eventos o si eran aleatorios.
+In the game [King of Thieves](https://www.kingofthieves.com/), there are certain events where players can earn rewards. These events repeat every so often, each lasting 3 days. I became curious to know if there was a predefined sequence for these events or if they were random.
 
-Fue entonces cuando se me ocurrió aplicar [n-gramas](https://en.wikipedia.org/wiki/N-gram) sobre los nombres de los eventos para intentar predecir el siguiente evento que se iba a producir. Tras varios meses apuntando eventos, llegué a la conclusion de que los eventos seguian una secuencia predefinida, la cual se puede ver a continuación, debido a que las probabilidades al tener en cuenta 4 eventos anteriores siempre resultaban en ``1.0``.
+That's when I decided to apply [n-grams](https://en.wikipedia.org/wiki/N-gram) to the event names to try to predict the next upcoming event. After several months of recording events, I concluded that the events follow a predefined sequence, which can be seen at Figure 1, since the probabilities when considering 4 previous events always resulted in ``1.0``.
 
 ```mermaid
 graph LR
@@ -15,16 +16,16 @@ graph LR
     E -->|7| C
     C -->|8| A
 ```
-<div align="center"><p><i>Figura 1. Ciclo de eventos dentro del juego, de longitud 8</i></p></div>
+<div align="center"><p><i>Figure 1. Event cycle within the game, length 8</i></p></div>
 
-El script `main.py` se basa en la lista de eventos `events.txt`, donde las primeras lineas son los eventos mas antiguos y las ultimas lineas a los mas recientes. Si quieres intentar predecir el siguiente evento teniendo en cuenta n eventos anteriores, el valor del parametro n ha de ser `n+1`:
+The `main.py` script is based on the list of events in `events.txt`, where the first lines are the oldest events and the last lines are the most recent. If you want to try to predict the next event taking into account n previous events, the value of the parameter n should be `n+1`:
 
 ```bash
 $n = 1 # example
 python main.py predict -n $(($n+1))
 ```
 
-Si quieres predecir el siguiente, has de anadir el evento predecido en el comando anterior a la lista. Por ejemplo si obtiviste este resultado:
+If you want to predict the next event, you need to add the predicted event from the previous command to the list. For example, if you got this result:
 ```
 Using n-gram of size n=2
 Historical events loaded: 26
@@ -35,7 +36,7 @@ Conditional probabilities:
 Prediction: joe's game 
 ```
 
-You could try to add the `joe's game` to the list and then predict again
+You could try to add `joe's game` to the list and then predict again:
 ```bash
 python main.py add "joe's game"
 python main.py predict -n 2
