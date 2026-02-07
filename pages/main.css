@@ -1,0 +1,114 @@
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+body {
+	font-family: Arial, sans-serif;
+	background: #050505;;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+    color: white;
+	max-width: 1000px;
+	margin: 10px auto;
+	background: #0d0d0d;
+	border-radius: 12px;
+	box-shadow: 0 2px 12px #0008;
+	padding: 32px 24px 24px 24px;
+    position: relative;
+}
+
+.info {
+	margin-top: 20px;
+	text-align: center;
+	border: 0px solid #262626;
+	padding: 15px 10px 15px 10px;
+	border-radius: 10px;
+	max-width: 80%px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+h1 {
+    text-align: center;
+	margin-bottom: 50px;
+    color: #d7d7d7;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #d7d7d7;
+}
+
+#event-graph {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 0px;
+	flex-wrap: wrap;
+}
+
+#countdown-section, #immediate-events {
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+}
+
+#countdown-section {
+    padding-top: 0px;
+    border-radius: 10px;
+    background-color: #121213;
+    padding-bottom: 18px;
+}
+
+#site-version {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    color: #aaa;
+    font-size: 0.95em;
+    padding: 4px 12px;
+    border-radius: 8px;
+    z-index: 10;
+    text-align: right;
+    margin: 0;
+}
+
+.footer {
+	text-align: center;
+	padding: 10px 20px 15px 20px;
+	background-color: #0d0d0d;
+	border-top: 1px solid #262626;
+	border-radius: 0px;
+	color: #9ca3af;
+	font-size: 0.9rem;
+	line-height: 1.8;
+}
+
+.footer p {
+	margin: 8px 0;
+}
+
+.footer strong {
+	color: white;
+	font-weight: 600;
+}
+
+.footer span {
+	color: #cfcfcf;
+	font-weight: 500;
+}
+
+.footer a {
+	color: #60a5fa;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+.footer a:hover {
+	color: #93c5fd;
+	text-decoration: underline;
+}
