@@ -1,5 +1,5 @@
 const CONFIG = {
-    BASE_DATE: new Date(Date.UTC(2026, 1, 11, 0, 0, 0)), 
+    BASE_DATE: new Date(Date.UTC(2026, 1, 13, 0, 0, 0)), 
     MS_PER_EVENT: 3 * 24 * 60 * 60 * 1000,
     NODE_ID_MAP: {
         "Joe's Game": 'A',
